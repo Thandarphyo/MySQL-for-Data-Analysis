@@ -10,7 +10,7 @@ END
 # CASE STATEMENTS
 -- CASE Statements allow you to use conditional logic to specify how your results should be calculates for various cases.*/
  -- use mavenmovies;
-/*SELECT DISTINCT
+SELECT DISTINCT
 length,
 CASE 
 WHEN length<60 THEN 'under 1 hr'
@@ -21,7 +21,7 @@ END AS length_bucket
 FROM film*/
 
 # CASE WITH ELSE 
-/*
+
 SELECT DISTINCT 
 length,
 CASE 
@@ -32,7 +32,7 @@ ELSE 'uh oh...check logic!'
 END AS LENGTH_BUCKET 
 FROM Film*/
 
-/*SELECT DISTINCT 
+SELECT DISTINCT 
 title,
 CASE 
 WHEN rental_duration<=4 THEN 'rental_too_expensive'
@@ -47,7 +47,7 @@ FROM film */
 
  # “I’d like to know which store each customer goes to, and whether or not they are active.
 # Could you pull a list of first and last names of all customers, and label them as either ‘store 1 active’, ‘store 1 inactive’, ‘store 2 active’, or ‘store 2 inactive’?
-/*
+
 use mavenmovies;
 select first_name,last_name,
 case 
@@ -59,7 +59,7 @@ else ' error'
 end as store_and_status
 from customer*/
 -- CASE and COUNT
-/*select 'film_id',
+select 'film_id',
 COUNT(CASE WHEN store_id=1 then inventory_id else null end) as store_1_copies,
 COUNT(CASE WHEN store_id=2 then inventory_id else null end) as store_2_copies,
 COUNT(inventory_id ) as total_copies
